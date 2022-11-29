@@ -25,8 +25,8 @@ int main() {
 	
 	short answer;
 	int n;
-	
 	std::string path;
+
 	do {
 		
 		std::cout << "Выберите, что вы хотите сделать: \n";
@@ -39,7 +39,7 @@ int main() {
 		std::cout << "Ввод -> ";		
 		std::cin >> answer;
 	} while (answer != 0 && answer != 1 && answer != 2 && answer != 3 && answer != 4);
-		
+	system("cls");
 	switch (answer) {
 			
 		case 0:	
@@ -82,7 +82,8 @@ int main() {
 			break;
 		case 4:
 			
-			add_book(mass_book, size); size++;
+			add_book(mass_book, size);
+			size++;
 
 			for (int i = 0; i < size; i++)
 				show_book(mass_book[i]);
