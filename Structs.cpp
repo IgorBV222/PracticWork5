@@ -16,14 +16,14 @@ void show_book(book& B) {
 	std::cout << "÷ена за экземпл€р:    " << B.price << '\n';
 
 	std::cout << "----------------------------------\n";
-};
+}
 
 //‘ункци€ принимает книгу и возвращает им€ еЄ автора(без фамилии)
 std::string show_author(book& B) {
 	std::string tmp = B.author_name;
 	std::string newtmp;
 	return newtmp += tmp.substr(tmp.rfind(' '));
-};
+}
 
 //‘ункци€ принимает книгу и путь к файлу, после чего записывает информацию о книге в указанный файл. –аботает с ошибкой!!!!
 void save_book(book& B, std::string path) {
@@ -43,7 +43,7 @@ void save_book(book& B, std::string path) {
 	else
 		std::cout << "ќшибка открыти€ файла: " << path << "\n";
 	fs.close();
-};
+}
 
 
 //‘ункци€ принимает массив книг и его длину, после чего добавл€ет в его конец новую книгу, которую вводит пользователь внутри функции
@@ -68,16 +68,10 @@ void add_book(book*& arr, int length) {
 	std::cin >> arr[length].number_pages;
 	std::cout << "¬ведите цену за экземпл€р: ";
 	std::cin >> arr[length].price;
-};
+}
 
 
 //‘ункци€ принимает массив книг и его длину, после чего полностью очищает его, удал€€ все элементы массива.
 void clear_arr(book*& arr, int length) {
-
-	for (int i = 0; i < length; i++)
-	{
-		delete &arr[i];
-	}
 	delete[]arr;
-};
-
+}
